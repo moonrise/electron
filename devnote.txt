@@ -1,0 +1,21 @@
+Electron + React + Webpack
+
+Electron's entry point is a javascript (not html) pointed by 'main' attribute in package.json - normally main.js.
+This 'electron main process' javascript is provided to electron runtime in a variety of ways:
+
+./node_modules/.bin/electron *.js
+./node_modules/.bin/electron . (looks for main script attribute in package.json file in the current directory)
+./node_modules/.bin/electron (open it manually from the electron launcher)
+
+In turn 'electron render process' is invoked by the main process by referencing a html entry point (mainWindow.loadURL).
+This html entry point is analogous to an html loaded into a browser. In this project, renderer.js is loaded with a
+script tag. But this javascript file is used as the entry point to Webpack, and consequently './dist/app.js' is loaded.
+
+That is:
+
+main.js: electron main process entry point
+index.html: electron renderer process entry point
+renderer.js: electron renderer process which is the root of webpack build process
+
+
+
