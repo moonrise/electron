@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    entry: "./renderer.js",
+    entry: "./render.js",
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist')

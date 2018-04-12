@@ -20,7 +20,7 @@ class Board extends React.Component {
         }
     }
 
-    renderSquare(i) {
+    RenderSquare(i) {
         return <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)}/>;
     }
 
@@ -37,19 +37,19 @@ class Board extends React.Component {
             <div>
                 <div className="status">{status}</div>
                 <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
+                    {this.RenderSquare(0)}
+                    {this.RenderSquare(1)}
+                    {this.RenderSquare(2)}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
+                    {this.RenderSquare(3)}
+                    {this.RenderSquare(4)}
+                    {this.RenderSquare(5)}
                 </div>
                 <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
+                    {this.RenderSquare(6)}
+                    {this.RenderSquare(7)}
+                    {this.RenderSquare(8)}
                 </div>
             </div>
         );
